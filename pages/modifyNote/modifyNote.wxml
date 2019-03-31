@@ -1,0 +1,10 @@
+<!--pages/modifyNote/modifyNote.wxml-->
+<view class="page">
+<view class="content">
+  <form  bindsubmit="bindFormSubmit">
+    <textarea placeholder="请输入文字，不超过250个字符" name="details" value="{{details}}" />
+    <input class='userid' name="userid" value="{{userid}}"/>
+    <button class="sure" form-type="submit">确定</button>
+  </form>
+</view>
+</view>

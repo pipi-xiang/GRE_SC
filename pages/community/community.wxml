@@ -1,0 +1,39 @@
+<!--pages/community/community.wxml-->
+<!--导航条-->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-index="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="getMessage">{{item}}</text>
+</view>
+
+<!--免费资源-->
+<view hidden="{{currentTab!==0}}" bindtap='getMessage'>
+</view>
+<!--交换资源-->
+<view hidden="{{currentTab!==1}}" bindtap='getMessage'>
+</view>
+<!--未来校友-->
+<view hidden="{{currentTab!==2}}" bindtap='getMessage'>
+</view>
+
+<!-- 表单 -->
+<form bindsubmit="formSubmit">
+<input type="text" name="text" value="{{text}}" placeholder='输入留言内容' class="input-style"/>
+<button formType="submit" class="btn" wx:if="{{nickName == empty}}" open-type="getUserInfo"  bindtap='login'>授权登录</button>
+<button formType="submit" class="btn" wx:else>留言</button>
+<input type="text" name="nickname" value='{{nickName}}' style="display:none;"/>
+<input type="text" name="headimg" value='{{avatarUrl}}' style="display:none;"/>
+</form>
+
+ <!--留言内容-->
+<view wx:for="{{re}}" wx:key="re">
+  <view class="result">{{item.result}}</view>
+</view>
+<view style="text-align:center;font-size:14px;color:#ccc;margin-top:20px;">以下是留言内容</view>
+<view wx:for="{{messageList}}" wx:key="item" class="liuyanview">
+  <view class="headimg"><image src="{{item.headimg}}"></image></view>
+  <view class="nickname_liuyantext">
+    <view class="nickname">{{item.nickname}} <view class="time">{{item.createtime}}</view></view>
+    <view class="text">{{item.text}}</view>
+  </view>
+  <!-- 占位符 -->
+  <view style="width:100%;height:10px;"></view>
+</view>

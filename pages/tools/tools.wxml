@@ -1,0 +1,6 @@
+<!--pages/tools/tools.wxml-->
+<view class='contanier'>
+<button class='tool' type="primary"plain="plain" bindtap="copyApply">报考入口</button>
+<button class='tool' type="primary"plain="plain" bindtap="copyScore">成绩查询</button>
+<button class='tool' type="primary"plain="plain" bindtap="copyTicket">准考准打印</button>
+</view>

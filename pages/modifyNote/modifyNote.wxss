@@ -1,0 +1,13 @@
+/* pages/modifyNote/modifyNote.wxss */
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.content {
+  margin: 10px;
+  height: 90%;
+}
+.sure {
+  background-color: #88AA00;
+}

@@ -1,0 +1,45 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/community/community",
+    "pages/tools/tools",
+    "pages/notes/notes",
+    "pages/modifyNote/modifyNote"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#88AA00",
+    "navigationBarTitleText": "考研助手",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "selectedColor": "#88AA00",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "selectedIconPath": "images/icon_azhuye.png",
+        "iconPath": "images/icon_zhuye.png"
+      },
+      {
+        "pagePath": "pages/community/community",
+        "text": "资源社区",
+        "selectedIconPath": "images/icon_ashequ.png",
+        "iconPath": "images/icon_shequ.png"
+      },
+      {
+        "pagePath": "pages/tools/tools",
+        "text": "工具栏",
+        "selectedIconPath": "images/icon_agongju.png",
+        "iconPath": "images/icon_gongju.png"
+      },
+      {
+        "pagePath": "pages/notes/notes",
+        "text": "便签",
+        "selectedIconPath": "images/icon_anote.png",
+        "iconPath": "images/icon_note.png"
+      }
+    ]
+  }
+}

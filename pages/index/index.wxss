@@ -1,0 +1,49 @@
+/**index.wxss**/
+
+.count{
+  width: 100%;
+  height: 120px;
+  position: relative;
+}
+.count image{
+  width: 100%;
+  height: 100%;
+}
+.countDay{
+  position: absolute;
+  z-index: 1;
+  top:45%;
+  left: 57%;
+  display: flex;
+  color: white;
+  font-size: 30px;
+}
+
+.school-list{
+height:80px;
+}
+.school-item{
+  overflow: hidden;
+  height: 80px;
+  padding: 20px;
+}
+.school-body{
+  margin-left: 20rpx;
+  float: left;
+}
+.school-name{
+  color: #212121;
+  font-size: 20px;
+  line-height: 1;
+}
+.school-address{
+margin-top: 30px;
+font-size: 15px;
+color: #212121;
+line-height: 1;
+}
+.school-item image{
+float: right;
+width: 70px;
+height: 70px;
+}

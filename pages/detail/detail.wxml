@@ -1,0 +1,14 @@
+<!--pages/detail/detail.wxml-->
+
+<!--学校详细信息-->
+<view>
+<view class='title'>{{schoolName}}</view>
+<text space='emsp' class='detail'>{{schoolMessage.desc}}</text>
+<view class='item'>1,报名</view>
+<text space='emsp' class='detail'>{{schoolMessage.apply}}</text>
+<view class='item'>2，考试</view>
+<text space='emsp' class='detail'>{{schoolMessage.exam}}</text>
+<view class='item'>3，其他说明</view>
+<text space='emsp' class='detail'>{{schoolMessage.state}}</text>
+<button bindtap='copyUrl' data-variable="{{schoolMessage.url}}">复制网址</button>
+</view>

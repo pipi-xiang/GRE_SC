@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<!--考试倒计时天数-->
+    <view class="count">
+    <image src='../../images/time.jpg'></image>
+      <view class="countDay">{{countDay}}</view>
+    </view>
+<!--学校列表-->
+<view class='school-list'>
+  <view class='school-item' wx:for="{{schoolList}}" wx:key="item" bindtap='toDetail' 
+  data-index='{{index}}'>
+    <view class='school-body'>
+      <view class='school-name'>{{item.name}}</view>
+      <view class='school-address'>校区地址：{{item.address}}</view>
+    </view>
+    <image src='{{item.badge}}'></image>
+  </view>
+</view>

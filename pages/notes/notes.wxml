@@ -1,0 +1,18 @@
+<view class='page'>
+  <!-- 每一条文字 -->
+  <scroll-view scroll-y='true' class='lists'>
+    <view class="notes-list" wx:for="{{notesList}}" wx:key="item">
+      <view class="note-id" bindtap="toModifyNote" data-noteid="{{item.noteid}}">
+        <view class="note-details">{{item.details}}</view>
+        <view class='note-createtime'>创建时间：{{item.createtime}}                    </view>
+      </view>
+      <button class="delete" size="mini" bindtap="deleteNote" data-noteid="{{item.noteid}}"
+        data-index="{{index}}">删除</button>
+    </view>
+  </scroll-view>
+   <button bindtap='getNotesList'>获取便签</button>
+  <!-- 添加一条文字的按钮 -->
+  <view class='add' bindtap='toModifyNote'>
+    <image src='../../images/icon_edit.png'></image>
+  </view>
+</view>
