@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wx.wx_gre.dao.MessageDao">
+    <select id="queryMessagesByTypeId" resultType="com.wx.wx_gre.bean.Message" >
+        SELECT nickname,headimg,text,createtime FROM message WHERE typeid = #{typeid};
+    </select>
+    <insert id="addMessage" useGeneratedKeys="true" keyProperty="messageid"
+            keyColumn="messageid" parameterType="com.wx.wx_gre.bean.Message">
+        INSERT INTO message(nickname,headimg,text,createtime,typeid)values(#{nickname},#{headimg},#{text},#{createtime},#{typeid});
+    </insert>
+</mapper>

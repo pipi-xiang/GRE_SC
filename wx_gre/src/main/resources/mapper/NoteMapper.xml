@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wx.wx_gre.dao.NoteDao">
+    <select id="findNotesByNoteId" resultType="com.wx.wx_gre.bean.Note">
+        SELECT noteid,details,createtime,userid FROM notes WHERE noteid = #{noteid};
+    </select>
+    <select id="queryNotesByUserId" resultType="com.wx.wx_gre.bean.Note">
+        SELECT noteid,details,createtime,userid FROM notes WHERE userid = #{userid};
+    </select>
+    <insert id="addNotes" useGeneratedKeys="true" keyProperty="noteid"
+            keyColumn="noteid" parameterType="com.wx.wx_gre.bean.Note">
+        INSERT INTO notes(details,createtime,userid)values(#{details},#{createtime},#{userid});
+    </insert>
+    <update id="editNotes" useGeneratedKeys="true" keyProperty="noteid"
+            keyColumn="noteid" parameterType="com.wx.wx_gre.bean.Note">
+        UPDATE notes SET details = #{details},createtime = #{createtime} WHERE noteid = #{noteid};
+    </update>
+    <delete id="deleteNotes" parameterType="java.lang.Integer">
+        DELETE From notes WHERE noteid = #{noteid};
+    </delete>
+</mapper>
